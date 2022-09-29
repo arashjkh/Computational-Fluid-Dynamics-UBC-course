@@ -1,1 +1,21 @@
+In this study, the convection of a one-dimensional wave in an inviscid medium is investigated.
+This equation is called as inviscid Burgers' equation, which its advective form is expressed as follows:
+
+∂u/∂t+u ∂u/∂x=0    (I)
+
+Its conservation form is also expressed as:
+
+∂u/∂t+∂F/∂x=0;F=u^2/2    (II)
+
+By using three different explicit finite-differencing schemes, i.e. Lax method, Lax-Wendro method, and MacCormack method,
+the equation II is solved numerically via Python.
+The domain has periodic boundary conditions, and the initial condition for the problem is subjected to (III) in the domain 0 ≤x ≤2π:
+
+u(x, 0) = sin(x) + 0.5 sin(0.5x)    (III)
+
+The timestep for this problem is taken as ∆t=0.01 [sec].
+Units of x and u are taken to be meter [m] and meter per second [m/s], respectively. Hence, in plots, x and u will be accompanied by [m] and [m/s].
+The courant number (ν) is taken 0.5.
+For determining u_max, the derivative of the (III) is taken to be zero, and the equation is solved to find the value of u, which is, in this case, u_max.
+The value of u_max is 1.31 [m/s].
 
