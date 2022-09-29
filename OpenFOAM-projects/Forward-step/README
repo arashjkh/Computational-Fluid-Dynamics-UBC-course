@@ -1,1 +1,8 @@
-
+A supersonic inviscid, laminar flow over a forwards-facing step is investigated (Fig. Forward-step.png).
+A fictitious gas with the following properties is defined:
+M(molar mass) = 11640.3 kg/kmol;  c_p = 2.5 J/(kg.K); μ = 0 (inviscid); γ (ratio of specific heats) =1.4; and Pr = 1.
+The properties of the flow are taken such that the inlet Mach number has to be 3. That is to say, the sound speed (c= √γRT) will be equal to 1 [m/s].
+Since the speed of sound is 1 [m/s], the inlet Mach number can be set by fixing an inlet velocity of 3 [m/s].
+The inlet static pressure is set to 1 [Pa] and zero-gradient condition is fixed at the outlet.
+Owing to adiabatic walls and an inviscid flow, the total temperature is constant and equal to 1 [K] at both the inlet and the outlet.
+In order to run the simulations for the incompressible problem, rhoCentralFoam command is implemented through OpenFOAM.
