@@ -1,0 +1,13 @@
+This problem is an axisymmetric converging-diverging nozzle, in which an inviscid, laminar, steady, non-conducting fluid flows within it.
+The inlet total pressure is equal to a constant value of 10 [kPa].
+Accordingly, three different outlet static pressures, corresponding to p_e/p_0 =0.89, p_e/p_0 =0.75, and p_e/p_0 =0.16, are considered.
+In fact, different outlet pressures yield different flow types in the nozzle.
+The first case results in a subsonic, isentropic flow.
+The second case yields a supersonic flow with a normal shock in the diffusing section.
+The last case is a supersonic isentropic flow.
+In order to accelerate the convergence for the second and the third cases,
+in which the flow through the nozzle is chocked and gives rise to sonic conditions,
+initial pressure distribution of p_0 = 10 [kPa] for the upstream of the throat and p_0 = 7.5 [kPa] and 1.6 [kPa] are specified for the two cases respectively.
+What’s more, the fluid properties are for those of air with a M (molar mass) = 29 kg/kmol; c_p = 1005 J/(kg.K); μ = 0 (inviscid); γ (ratio of specific heats) =1.4;
+and Pr = 1. In order to simulate this incompressible flow in OpenFOAM, the rhoCentralFoam command is used.
+The entire simulation time is 0.7 [s] and the timestep is taken 0.001 [s].
