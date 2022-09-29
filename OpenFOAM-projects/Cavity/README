@@ -1,4 +1,4 @@
-In this numerical investigation, a square 2-D domain of 0.1×0.1 [m] is considered.
+In this numerical investigation, a square 2-D domain of 0.1×0.1 [m] is considered (Fig. Cavity.JPG).
 The bottom, left, and right walls are stationary, and the top wall is a moving lid with a constant velocity of 1 m/s in the x-direction.
 The viscosity of the fluid is taken to be 0.001 m2/s; hence the Reynolds number is 100, which is laminar.
 As such, a transient-state analysis via OpenFOAM9 is carried out in this report.
