@@ -1,4 +1,4 @@
-The steady-state temperature distribution is investigated in a two-dimensional plate of length 5 [m] and width 4 [m] (Fig. SS-T-dis.PNG).
+The steady-state temperature distribution is investigated in a two-dimensional plate of length 5 [m] and width 4 [m] (Fig. SS-T-distribution.JPG).
 All boundary conditions are supposed to be Dirichlet, i.e., constant temperature.
 For each boundary condition, two digits from student number is used. For the student number of 92033232, the boundary conditions are as follows: 
 AB = 92 °C; CD = 3 °C, EF = 32 °C, G = 32 °C
