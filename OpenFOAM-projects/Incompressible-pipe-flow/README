@@ -1,1 +1,9 @@
-
+In this investigation, the laminar, incompressible flow in a circular pipe is studied.
+The results are compared with theoretical values from the literature for laminar, incompressible pipe flows.
+The pipe’s radius is 1 [m] and its length is 25 times its radius (25R), i.e. 25 [m].
+The inlet boundary condition is a constant velocity of 0.1 [m/s],
+the outlet boundary condition is a uniform gauge static pressure of zero [Pa],
+and flow is no-slip on the walls.
+Moreover, Kinematic viscosity is 0.001 [kg/m^3 ], yielding a Reynolds number of 200, which is laminar.
+BlockMesh is used to generate meshes, and OpenFOAM’s icoFoam solver is used to model the laminar flow.
+The post-processing study is done in ParaView and plots are created through developing codes in Python. 
