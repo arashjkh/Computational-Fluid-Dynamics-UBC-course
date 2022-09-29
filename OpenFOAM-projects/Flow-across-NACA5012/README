@@ -1,0 +1,10 @@
+The subsonic flow over NACA 5012 airfoil is investigated in this study (Fig. Flow-across-NACA5012.PNG).
+Two different Reynolds numbers of 100 and 1000 are considered.
+The approaching velocity to the airfoil, i.e. free stream velocity, has zero angle of attack and equals to 1 [m/s].
+The airfoil chord is unit length (c = 1), so Reynolds number (Re=  Uc/ν) can be manipulated by changing the kinematic viscosity’s value.
+Fluid properties are constant, the initial gauge pressure is 0 [Pa], and the flow is both laminar and incompressible.
+In order to generate the mesh, GMSH software is used, and then, the generated mesh is converted to OpenFOAM readable mesh file,
+i.e. blockMesh, using gmshToFoam command.
+To reduce and optimize the costs of the study, a mesh refinement study is conducted.
+The overall running time for mesh refinement study is considered to be 20 [s] for all of the cases of Re = 100 and Re = 1000,
+since it takes some time for the flow to get stable all over the domain. 
