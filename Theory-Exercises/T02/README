@@ -1,1 +1,5 @@
+The steady-state temperature distribution is investigated in a two-dimensional plate of length 5 [m] and width 4 [m]. All boundary conditions are supposed to be Dirichlet, i.e., constant temperature. For each boundary condition, two digits from student number is used. For the student number of 92033232, the boundary conditions are as follows: 
+AB = 92 °C; CD = 3 °C, EF = 32 °C, G = 32 °C
+The steps sizes in both x and y directions are considered to be 0.05m, i.e., β=∆x/∆y=1.
+The initial temperature in domain is zero. Four different iterative methods, i.e., point Jacobi, point Gauss-Seidel, and point successive over-relaxation (PSOR), are implemented. Furthermore, Python programming language is used for the purpose of developing codes and obtaining the required plots. NumPy and Matplotlib packages are used accordingly.
 
