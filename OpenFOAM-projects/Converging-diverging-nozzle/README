@@ -1,4 +1,5 @@
-This problem is an axisymmetric converging-diverging nozzle, in which an inviscid, laminar, steady, non-conducting fluid flows within it.
+This problem is an axisymmetric converging-diverging nozzle,
+in which an inviscid, laminar, steady, non-conducting fluid flows within it (Fig. Converging-diverging-nozzle.png).
 The inlet total pressure is equal to a constant value of 10 [kPa].
 Accordingly, three different outlet static pressures, corresponding to p_e/p_0 =0.89, p_e/p_0 =0.75, and p_e/p_0 =0.16, are considered.
 In fact, different outlet pressures yield different flow types in the nozzle.
