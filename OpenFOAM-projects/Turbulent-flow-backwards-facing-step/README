@@ -1,1 +1,36 @@
+The boundary layer separation of turbulent flow and its subsequent reattachment is investigated.
+This, in fact, happens in several engineering applications such as airfoils and channels.
+Since Turbulence plays a crucial role in the reattachment process,
+it is indeed important that turbulence models can accurately model the impact of turbulence in this flow.
+As such, in this assignment, different popular turbulence models are considered
+and the results of the simulation are compared to benchmark experimental ones in [1].
 
+The computational domain is shown in Fig. Backwards-facing-step.PNG:
+
+The uniform turbulent flow enters a duct of height h = 25.4 [mm] and length h with a uniform inlet velocity (U_0) of 10 [m/s],
+and flows over a backwards-facing step with height h. Separation and reattachment occurs in the second duct of height 2h and length 8.11h.
+A slight constriction occurs downstream of the second duct to ensure that the flow reattaches upstream of the outlet boundary.
+What’s more, the flow is unsteady, Newtonian, and incompressible.
+The outlet static pressure is set to 10 [Pa] gauge. The inlet Reynolds number is 25400, which helps us define the kinematic viscosity for OpenFOAM.
+The turbulence is modelled using the Reynolds-averaged Navier-Stokes (RANS).
+The inlet turbulence intensity is equal to I=0.05U_0 and the inlet turbulence length scale is l=0.055h. Also, the fluid’s density (ρ) is 1 [kg/m^3 ].
+Four different turbulence models of Spalart-Allmaras, k-ϵ, k-ω, and k-ω shear stress transport (SST) are considered.
+In order to generate the mesh domain, blockMesh is used through OpenFOAM. The solver for this simulation is simpleFOAM.
+
+In order to calculate k, the following expression is used:
+
+k=  3/2 (UI^2 )=0.375 m^2/s^2 
+
+Using an empirically-based estimation, boundary condition for the dissipation rate (ϵ) is as follows:
+
+ϵ≈C_μ  k^(3/2)/l
+
+In which, l is the length scale of the inlet turbulence and C_μ=0.09 is a model constant.
+This results in ϵ=14.855  m^2/s^3 . Moreover, the boundary conditions for the specific dissipation rate (ω) is approximated from
+
+ω=√k/l=440.15s^(-1)
+
+***
+References:
+[1] R. PITZ and J. DAILY, "Experimental study of combustion in a turbulent free shear layer formed at a rearward facing step",
+19th Aerospace Sciences Meeting, 1981. Available: 10.2514/6.1981-106 [Accessed 5 December 2021].
