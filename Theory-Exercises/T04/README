@@ -1,1 +1,33 @@
+The 2D flow in a square duct, which has solid, no-slip walls with respect to x and y axes is considered.
+The duct has sides of length h=0.1[m] and the flow within the duct is axial, i.e., U=w(x,y).
+The flow is steady (∂w/∂t=0) and fully-developed (∂w/∂z=0).
+Moreover, its kinematic viscosity (μ) is 0.001 [Pa.s], the density (ρ) is 1 [kg/m^3 ], and the pressure gradient along the pipe is (dp/dz=-3.2[Pa/m]). 
+In order to solve this problem, the incompressible Navier-Stokes equation in z direction is applied:
+∂w/∂t+u ∂w/∂x+v ∂w/∂y+w ∂w/∂z=-∂p/∂z+μ((∂^2 w)/〖∂x〗^2 +(∂^2 w)/〖∂y〗^2 +(∂^2 w)/〖∂z〗^2 )
+By applying this problem’s assumptions to the equation above, we will get:
+μ((∂^2 w)/〖∂x〗^2 +(∂^2 w)/〖∂y〗^2 )-∂p/∂z=0
+The equation above is a diffusion problem for w velocity (e.g. elliptic PDE). To simplify:
+∇.(μ∇w)-dp/dz=0
+In order to derive the relations to solve an FVM problem, the mentioned equation must be integrated over an infinitesimal control volume:
+∫▒〖∇.(μ∇w)dΩ〗-∫▒〖dp/dz dΩ〗=0
+Now, we have to apply Gauss' divergence theory to the first integral so as to make it a surface integral over the faces of the control volume:
+∫▒〖n.(μ∇w)dA〗-∫▒〖dp/dz dΩ〗=0
+Consequently, the first and second integrals can be written as:
+∫▒〖n.(μ∇w)dA〗=weμ∂w/∂xdy+snμ∂w∂ydx
+∫▒〖dp/dz dΩ〗=∫_s^n▒∫_w^e▒〖∂p/∂z dydx〗
+Therefore:
+∫_w^e▒〖μ ∂w/∂x dy〗+∫_s^n▒〖μ ∂w/∂y dx〗-∫_s^n▒∫_w^e▒〖∂p/∂z dydx〗=0
+To proceed any further, we need to approximate the derivatives in our governing equation. By using the centered finite differences for the approximation, we will have:
+(∂w/∂x)_e≈(w_E-w_P)/∆x  ;(∂w/∂x)_w≈(w_P-w_W)/∆x  ; (∂w/∂x)_n≈(w_N-w_P)/∆y  ; (∂w/∂x)_s≈(w_P-w_S)/∆y
+By substituting these equations into the prior equation:
+μ ∆y/∆x (w_E-w_P )-μ ∆y/∆x (w_P-w_W )+μ ∆x/∆y (w_N-w_P )-μ ∆x/∆y (w_P-w_S )-dp/dz ∆y∆x=0
+Which can be simplified to:
+a_P w_P=a_E w_E+a_W w_W+a_N w_N+a_S w_S-S_u
+a_E=a_W= μ ∆y/∆x ; a_N=a_S= μ ∆x/∆y 
+a_P=a_E+a_W+a_N+a_S 
+S_u=dp/dz ∆x∆y
+
+Three iterative methods of Jacobi, Point Gauss-Seidel (PGS), and Point Successive over-relation (PSOR) are developed,
+which are presented in the appendix section in Python codes. Needless to say, PSOR method is more general,
+and in order to get accurate results for this problem, this method is considered. The relaxation factor (ω) is 0.1 for this case.
 
