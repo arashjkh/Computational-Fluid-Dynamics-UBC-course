@@ -3,4 +3,4 @@
 
 Copyright "Arash Jalil-Khabbazi"
 
-All Rights Reserved
+All Rights Reserved.
